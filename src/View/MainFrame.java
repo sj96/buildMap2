@@ -29,7 +29,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         UsetempPanel = new javax.swing.JPanel();
-        editArea1 = new View.editArea();
+        editArea1 = new View.EditArea();
         MenuBar = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -150,7 +150,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuSave;
     private javax.swing.JMenuItem MenuSaveAs;
     private javax.swing.JPanel UsetempPanel;
-    private View.editArea editArea1;
+    private View.EditArea editArea1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
