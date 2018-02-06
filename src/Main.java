@@ -22,7 +22,7 @@ public class Main {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException e) {
             // handle exception
-        } catch (IllegalAccessException e) { 
+        } catch (IllegalAccessException e) {
             // handle exception
         } catch (InstantiationException e) {
         } catch (UnsupportedLookAndFeelException e) {

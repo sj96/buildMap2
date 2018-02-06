@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.CellData;
+import Model.CellMap;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
@@ -18,7 +18,7 @@ public class EditAreaController {
 
     View.EditArea editArea;
     private Point cursor;
-    private final CellData[][] data;
+    private final CellMap[][] data;
     private final MouseInput mouseInput;
     private final int heightPanel = 600;
     private final int widthPanel = 800;

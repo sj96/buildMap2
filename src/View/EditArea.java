@@ -57,7 +57,7 @@ public class EditArea extends javax.swing.JPanel {
         //draw backGround
         drawGridBackGround(g);
         //draw data
-        drawData(g);
+        drawMap(g);
         //draw cell focus
         drawCursor(g);
     }
@@ -70,7 +70,7 @@ public class EditArea extends javax.swing.JPanel {
         controller.drawCursor(g);
     }
 
-    private void drawData(Graphics g) {
+    private void drawMap(Graphics g) {
 
     }
 

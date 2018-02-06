@@ -9,6 +9,6 @@ package Model;
  *
  * @author trana
  */
-public class CellData {
+public class Map {
     
 }
