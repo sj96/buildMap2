@@ -21,8 +21,9 @@ public class EditArea extends javax.swing.JPanel {
 
     public EditArea() {
         initComponents();
-
         this.controller = new Controller.EditAreaController(this);
+        setMinimumSize(new java.awt.Dimension(Controller.ConfigProgram.col*Controller.ConfigProgram.cellSize, Controller.ConfigProgram.row*Controller.ConfigProgram.cellSize));
+        setPreferredSize(new java.awt.Dimension(Controller.ConfigProgram.col*Controller.ConfigProgram.cellSize, Controller.ConfigProgram.row*Controller.ConfigProgram.cellSize));
     }
 
     /**
@@ -34,20 +35,26 @@ public class EditArea extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(java.awt.SystemColor.activeCaption);
-        setMaximumSize(new java.awt.Dimension(800, 600));
-        setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
+        jPopupMenu1.add(jMenuItem1);
+
+        setBackground(new java.awt.Color(168, 198, 230));
+        setMinimumSize(new java.awt.Dimension(825, 550));
+        setName(""); // NOI18N
+        setPreferredSize(new java.awt.Dimension(825, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 550, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -75,5 +82,7 @@ public class EditArea extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }

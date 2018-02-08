@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import Model.CellMap;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
@@ -18,21 +17,25 @@ public class EditAreaController {
 
     View.EditArea editArea;
     private Point cursor;
-    private final CellMap[][] data;
-    private final MouseInput mouseInput;
-    private final int heightPanel = 600;
-    private final int widthPanel = 800;
-    private int distanceLineBG = 6;
+    private Map map;
+    private final EditAreaMouseInput mouseInput;
+    private final int heightPanel;
+    private final int widthPanel;
+    private final int distanceLineBG = 6;
 
     public EditAreaController(View.EditArea ea) {
         this.editArea = ea;
-        this.data = null;
+        this.map = new Model.Map();
         this.cursor = null;
-        this.mouseInput = new MouseInput(this);
+        this.heightPanel = (int) ea.getPreferredSize().getHeight();
+        this.widthPanel = (int) ea.getPreferredSize().getWidth();
+        
+        this.mouseInput = new EditAreaMouseInput(this, this.heightPanel, this.widthPanel);
         this.editArea.addMouseListener(mouseInput);
         this.editArea.addMouseMotionListener(mouseInput);
-
-//        this.cursor = new Point(0, 0);
+        
+        
+        System.out.println(this.heightPanel+" "+this.widthPanel);
     }
 
     public void drawGridBackGround(Graphics g) {
@@ -44,6 +47,16 @@ public class EditAreaController {
         }
         for (int i = 1; i <= maxLine; i++) {
             g.drawLine(widthPanel, i * distanceLineBG, widthPanel - i * distanceLineBG, 0);
+        }
+        
+        g.setColor(Color.red);
+        //row
+        for (int i = 1; i < ConfigProgram.row; i++) {
+            g.drawLine(0, i * ConfigProgram.cellSize, widthPanel, i * ConfigProgram.cellSize);
+        }
+        //col
+        for (int i = 1; i < ConfigProgram.col; i++) {
+            g.drawLine(i*ConfigProgram.cellSize, 0, i*ConfigProgram.cellSize, heightPanel);
         }
     }
 

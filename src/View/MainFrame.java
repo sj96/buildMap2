@@ -28,8 +28,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        UsetempPanel = new javax.swing.JPanel();
-        editArea1 = new View.EditArea();
+        editArea2 = new View.EditArea();
         MenuBar = new javax.swing.JMenuBar();
         MenuFile = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -45,53 +44,24 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Build Map Tool 1.0");
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(940, 600));
+        setMinimumSize(new java.awt.Dimension(1001, 571));
         setResizable(false);
-        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.X_AXIS));
 
         jScrollPane1.setMaximumSize(new java.awt.Dimension(4000, 4000));
-        jScrollPane1.setMinimumSize(new java.awt.Dimension(170, 600));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(170, 550));
         jScrollPane1.setName(""); // NOI18N
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(170, 600));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(170, 550));
 
-        UsetempPanel.setBackground(new java.awt.Color(255, 255, 255));
-        UsetempPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usetemp", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
-        UsetempPanel.setMaximumSize(new java.awt.Dimension(150, 1000));
-        UsetempPanel.setMinimumSize(new java.awt.Dimension(150, 596));
-        UsetempPanel.setName(""); // NOI18N
-        UsetempPanel.setPreferredSize(new java.awt.Dimension(150, 596));
-
-        javax.swing.GroupLayout UsetempPanelLayout = new javax.swing.GroupLayout(UsetempPanel);
-        UsetempPanel.setLayout(UsetempPanelLayout);
-        UsetempPanelLayout.setHorizontalGroup(
-            UsetempPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 170, Short.MAX_VALUE)
+        javax.swing.GroupLayout editArea2Layout = new javax.swing.GroupLayout(editArea2);
+        editArea2.setLayout(editArea2Layout);
+        editArea2Layout.setHorizontalGroup(
+            editArea2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
-        UsetempPanelLayout.setVerticalGroup(
-            UsetempPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 577, Short.MAX_VALUE)
+        editArea2Layout.setVerticalGroup(
+            editArea2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-
-        jScrollPane1.setViewportView(UsetempPanel);
-        UsetempPanel.getAccessibleContext().setAccessibleName("");
-        UsetempPanel.getAccessibleContext().setAccessibleDescription("");
-
-        getContentPane().add(jScrollPane1);
-
-        editArea1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        javax.swing.GroupLayout editArea1Layout = new javax.swing.GroupLayout(editArea1);
-        editArea1.setLayout(editArea1Layout);
-        editArea1Layout.setHorizontalGroup(
-            editArea1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 796, Short.MAX_VALUE)
-        );
-        editArea1Layout.setVerticalGroup(
-            editArea1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(editArea1);
 
         MenuBar.setAlignmentX(1.0F);
         MenuBar.setAlignmentY(0.5F);
@@ -132,6 +102,24 @@ public class MainFrame extends javax.swing.JFrame {
 
         setJMenuBar(MenuBar);
 
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(editArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -149,8 +137,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuOpen;
     private javax.swing.JMenuItem MenuSave;
     private javax.swing.JMenuItem MenuSaveAs;
-    private javax.swing.JPanel UsetempPanel;
-    private View.EditArea editArea1;
+    private View.EditArea editArea2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
