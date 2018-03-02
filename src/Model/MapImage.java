@@ -22,7 +22,7 @@ public class MapImage {
         this.p = p;
     }
     
-    public void draw(Graphics g, int value, int frame){
+    public void draw(Graphics g){
         
     }
 }

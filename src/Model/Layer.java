@@ -7,6 +7,7 @@ package Model;
 
 import java.awt.Graphics;
 import java.awt.Point;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -14,48 +15,28 @@ import java.awt.Point;
  */
 public class Layer {
 
-    private CellImg cells[][];
+    private Cell cells[][];
 
     public Layer() {
-        cells = new CellImg[Controller.ConfigProgram.row][Controller.ConfigProgram.col];
-        for (int row = 0; row < Controller.ConfigProgram.row; row++) {
-            for (int col = 0; col < Controller.ConfigProgram.col; col++) {
+        cells = new Cell[Controller.Config.row][Controller.Config.col];
+        for (int row = 0; row < Controller.Config.row; row++) {
+            for (int col = 0; col < Controller.Config.col; col++) {
                 cells[row][col] = null;
             }
         }
     }
 
-    public void addCell(MapImage img, Point p) {
-        cells[p.y][p.x] = new CellImg(img, p);
+    public void addCell(ImageIcon img, Point p) {
+        cells[p.y][p.x] = new Cell(img, p);
     }
 
     public void deleteCell(Point p) {
         cells[p.y][p.x] = null;
     }
 
-    public void updateValue() {
-        for (int row = 0; row < Controller.ConfigProgram.row; row++) {
-            for (int col = 0; col < Controller.ConfigProgram.col; col++) {
-                if (cells[row][col] != null) {
-//                    checkValue();
-                }
-            }
-        }
-    }
-
-    public void update() {
-        for (int row = 0; row < Controller.ConfigProgram.row; row++) {
-            for (int col = 0; col < Controller.ConfigProgram.col; col++) {
-                if (cells[row][col] != null) {
-                    cells[row][col].update();
-                }
-            }
-        }
-    }
-
     public void draw(Graphics g) {
-        for (int row = 0; row < Controller.ConfigProgram.row; row++) {
-            for (int col = 0; col < Controller.ConfigProgram.col; col++) {
+        for (int row = 0; row < Controller.Config.row; row++) {
+            for (int col = 0; col < Controller.Config.col; col++) {
                 if (cells[row][col] != null) {
                     cells[row][col].draw(g);
                 }

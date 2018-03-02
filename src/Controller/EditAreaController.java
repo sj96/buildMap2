@@ -17,7 +17,7 @@ public class EditAreaController {
 
     View.EditArea editArea;
     private Point cursor;
-    private Map map;
+    private Model.Map map;
     private final EditAreaMouseInput mouseInput;
     private final int heightPanel;
     private final int widthPanel;
@@ -49,30 +49,30 @@ public class EditAreaController {
             g.drawLine(widthPanel, i * distanceLineBG, widthPanel - i * distanceLineBG, 0);
         }
         
-        g.setColor(Color.red);
+        g.setColor(Color.black);
         //row
-        for (int i = 1; i < ConfigProgram.row; i++) {
-            g.drawLine(0, i * ConfigProgram.cellSize, widthPanel, i * ConfigProgram.cellSize);
+        for (int i = 1; i < Config.row; i++) {
+            g.drawLine(0, i * Config.cellSize, widthPanel, i * Config.cellSize);
         }
         //col
-        for (int i = 1; i < ConfigProgram.col; i++) {
-            g.drawLine(i*ConfigProgram.cellSize, 0, i*ConfigProgram.cellSize, heightPanel);
+        for (int i = 1; i < Config.col; i++) {
+            g.drawLine(i*Config.cellSize, 0, i*Config.cellSize, heightPanel);
         }
     }
 
     public void drawCursor(Graphics g) {
         if (this.cursor != null) {
             g.setColor(Color.black);
-            g.drawRect(this.cursor.x, this.cursor.y, ConfigProgram.cellSize, ConfigProgram.cellSize);
-            g.drawRect(this.cursor.x + 3, this.cursor.y + 3, ConfigProgram.cellSize - 6, ConfigProgram.cellSize - 6);
+            g.drawRect(this.cursor.x, this.cursor.y, Config.cellSize, Config.cellSize);
+            g.drawRect(this.cursor.x + 3, this.cursor.y + 3, Config.cellSize - 6, Config.cellSize - 6);
             g.setColor(Color.white);
-            g.drawRect(this.cursor.x + 1, this.cursor.y + 1, ConfigProgram.cellSize - 2, ConfigProgram.cellSize - 2);
-            g.drawRect(this.cursor.x + 2, this.cursor.y + 2, ConfigProgram.cellSize - 4, ConfigProgram.cellSize - 4);
+            g.drawRect(this.cursor.x + 1, this.cursor.y + 1, Config.cellSize - 2, Config.cellSize - 2);
+            g.drawRect(this.cursor.x + 2, this.cursor.y + 2, Config.cellSize - 4, Config.cellSize - 4);
         }
     }
 
-    public void drawData(Graphics g) {
-
+    public void drawMap(Graphics g) {
+        map.draw(g);
     }
     
     public void update(){

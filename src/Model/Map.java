@@ -8,40 +8,42 @@ package Model;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author trana
  */
-public class Map {
+public class Map extends GameObject{
 
-    private Layer mainlayer;
-    private Layer sublayer;
-    private Layer decortatelayer;
+    private Layer mainLayer;
+    private Layer subLayer;
     private ArrayList<Point> roadLayer;
-
-    public void addMainCell(Point p, MapImage img) {
-        mainlayer.addCell(img, p);
-        sublayer.deleteCell(p);
-        decortatelayer.deleteCell(p);
+    
+    public Map(){
+        this.mainLayer = new Layer();
+        this.subLayer = new Layer();
     }
 
-    public void addSubCell(Point p, MapImage img) {
-        sublayer.addCell(img, p);
-        decortatelayer.deleteCell(p);
+    public void addMainCell(Point p, ImageIcon img) {
+        this.mainLayer.addCell(img, p);
+        this.subLayer.deleteCell(p);
     }
 
-    public void addDecortateCell(Point p, MapImage img) {
-        decortatelayer.addCell(img, p);
+    public void addSubCell(Point p, ImageIcon img) {
+        this.subLayer.addCell(img, p);
     }
+
     public void addRoad(Point p){
-        roadLayer.add(p);
+        this.roadLayer.add(p);
     }
     public void removeRoad(Point p){
-        roadLayer.remove(p);
+        this.roadLayer.remove(p);
     }
     
+    @Override
     public void draw(Graphics g){
-        mainlayer.draw(g);
+        this.mainLayer.draw(g);
+        this.subLayer.draw(g);
     }
 }

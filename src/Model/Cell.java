@@ -7,33 +7,29 @@ package Model;
 
 import java.awt.Graphics;
 import java.awt.Point;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author trana
  */
-public class CellImg {
+public class Cell {
 
-    private MapImage image;
-    private int value;
+    private ImageIcon image;
     private int frame;
     private Point p;
 
-    public CellImg(MapImage img, Point p) {
+    public Cell(ImageIcon img, Point p) {
         this.frame = 0;
         this.p = p;
     }
 
-    public void setImage(MapImage img) {
+    public void setImage(ImageIcon img) {
         this.image = img;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     public void draw(Graphics g) {
-        this.image.draw(g, value, frame);
+        
     }
 
     public void update() {

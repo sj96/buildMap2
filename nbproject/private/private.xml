@@ -3,11 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Java/buildMap2/src/Controller/EditAreaMouseInput.java</file>
+            <file>file:/D:/Java/buildMap2/src/Model/UseStampButton.java</file>
             <file>file:/D:/Java/buildMap2/src/Main.java</file>
-            <file>file:/D:/Java/buildMap2/src/Controller/MouseInput.java</file>
-            <file>file:/D:/Java/buildMap2/src/Controller/EditAreaController.java</file>
+            <file>file:/D:/Java/buildMap2/src/Model/Layer.java</file>
+            <file>file:/D:/Java/buildMap2/src/Model/Cell.java</file>
             <file>file:/D:/Java/buildMap2/src/View/MainFrame.java</file>
+            <file>file:/D:/Java/buildMap2/src/Model/GameObject.java</file>
             <file>file:/D:/Java/buildMap2/src/View/EditArea.java</file>
+            <file>file:/D:/Java/buildMap2/src/View/UseStamp.java</file>
+            <file>file:/D:/Java/buildMap2/src/Controller/EditAreaController.java</file>
+            <file>file:/D:/Java/buildMap2/src/Controller/Config.java</file>
+            <file>file:/D:/Java/buildMap2/src/Model/Source.java</file>
+            <file>file:/D:/Java/buildMap2/src/Controller/UseStampController.java</file>
+            <file>file:/D:/Java/buildMap2/src/Model/Map.java</file>
         </group>
     </open-files>
 </project-private>

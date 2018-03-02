@@ -22,8 +22,8 @@ public class EditArea extends javax.swing.JPanel {
     public EditArea() {
         initComponents();
         this.controller = new Controller.EditAreaController(this);
-        setMinimumSize(new java.awt.Dimension(Controller.ConfigProgram.col*Controller.ConfigProgram.cellSize, Controller.ConfigProgram.row*Controller.ConfigProgram.cellSize));
-        setPreferredSize(new java.awt.Dimension(Controller.ConfigProgram.col*Controller.ConfigProgram.cellSize, Controller.ConfigProgram.row*Controller.ConfigProgram.cellSize));
+        setMinimumSize(new java.awt.Dimension(Controller.Config.col*Controller.Config.cellSize, Controller.Config.row*Controller.Config.cellSize));
+        setPreferredSize(new java.awt.Dimension(Controller.Config.col*Controller.Config.cellSize, Controller.Config.row*Controller.Config.cellSize));
     }
 
     /**
@@ -63,7 +63,7 @@ public class EditArea extends javax.swing.JPanel {
         super.paintComponent(g);
         //draw backGround
         drawGridBackGround(g);
-        //draw data
+        //draw Map
         drawMap(g);
         //draw cell focus
         drawCursor(g);
@@ -78,7 +78,7 @@ public class EditArea extends javax.swing.JPanel {
     }
 
     private void drawMap(Graphics g) {
-
+        controller.drawMap(g);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

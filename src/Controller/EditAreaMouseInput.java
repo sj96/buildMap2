@@ -76,8 +76,8 @@ public class EditAreaMouseInput extends MouseAdapter {
     }
     //Phương thức trả về tọa độ Ô đang được chọn trên EditArea 
     private Point getCellCussor(Point mouseLocation) {        
-        int newX = ((int) mouseLocation.x / ConfigProgram.cellSize) * ConfigProgram.cellSize;
-        int newY = ((int) mouseLocation.y / ConfigProgram.cellSize) * ConfigProgram.cellSize;
+        int newX = ((int) mouseLocation.x / Config.cellSize) * Config.cellSize;
+        int newY = ((int) mouseLocation.y / Config.cellSize) * Config.cellSize;
         Point newCussor = new Point(newX, newY);
         return newCussor;
     }
